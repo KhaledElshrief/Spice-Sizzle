@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Spice-Sizzle/static/css/main.ccd5e124.css",
+    "main.js": "/Spice-Sizzle/static/js/main.f8c632af.js",
+    "index.html": "/Spice-Sizzle/index.html",
+    "main.ccd5e124.css.map": "/Spice-Sizzle/static/css/main.ccd5e124.css.map",
+    "main.f8c632af.js.map": "/Spice-Sizzle/static/js/main.f8c632af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccd5e124.css",
+    "static/js/main.f8c632af.js"
+  ]
+}
