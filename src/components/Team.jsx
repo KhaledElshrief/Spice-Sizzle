@@ -1,34 +1,49 @@
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import React from "react";
 import TopNav from "./TopNav";
 import Footer from "./Footer";
-import { Container, Row, Col } from "react-bootstrap";
-function BasicExample() {
+import { team } from "../data/data";
+import "../App.css";
+
+function Team() {
+  console.log(team);
   return (
     <>
       <TopNav />
 
-      <Container >
-        <Row>
-          <Col md={4}>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+      <section className="team" id="team">
+        <div className="section-header">
+          <h1 className="section-heading">Our Team</h1>
+          <div className="underline"></div>
+        </div>
 
+        {team.map((t) => {
+          return(
+            <div key={t.id} className="cards-wrapper">
+            <div key={t.id} className="card" data-tilt>
+              <div className="card-img-wrapper">
+                <img
+                  src={t.image}
+                  alt="Frontend developer"
+                />
+              </div>
+              <div className="card-info">
+                <h2>{t.name}</h2>
+                <h3>{t.text}</h3>
+                <p>
+                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, impedit!"
+                </p>
+                <button>Read More</button>
+              </div>
+            </div>
+          </div>
+          )
+          
+        })}
+      </section>
       <Footer />
     </>
   );
 }
 
-export default BasicExample;
+export default Team;

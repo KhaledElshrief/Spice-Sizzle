@@ -16,15 +16,17 @@ const TopNav = () => {
         <div onClick={() => setSideNav(!sideNav)} className="cursor-pointer">
           <AiOutlineMenu size={25} />
         </div>
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-          Ai {""}
-          <span className="font-bold text-[#c29525]">-Architect</span>
-        </h1>
+        <Link to="/">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
+            Ai {""}
+            <span className="font-bold text-[#c29525]">-Architect</span>
+          </h1>
+        </Link>
       </div>
-      <div className="bg-gray-200 rounded-full flex justify-center ml-auto  items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
+      <div className="bg-gray-200 rounded-full flex justify-center m-auto  items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
         <AiOutlineSearch size={25} />
         <input
-          className="bg-transparent p-2 w-full focus:outline-none"
+          className="bg-transparent p-2 w-full focus:outline-none "
           type="text"
           placeholder="search meals"
         />
@@ -69,21 +71,26 @@ const TopNav = () => {
         </h2>
         <nav>
           <ul className="flex flex-col p-4 text-gray-900">
-            <li className="text-xl py-4 flex">
-              <FaHome
-                size={25}
-                className="mr-4 text-white bg-black rounded-full"
-              />
-              Home
-            </li>
-            <li className="text-xl py-4 flex">
-              <FaInfoCircle
-                href="#about-us"
-                size={25}
-                className="mr-4 text-white bg-black rounded-full"
-              />
-              About Project
-            </li>
+            <Link to="/">
+              {" "}
+              <li className="text-xl py-4 flex">
+                <FaHome
+                  size={25}
+                  className="mr-4 text-white bg-black rounded-full"
+                />
+                Home
+              </li>
+            </Link>
+            <Link to="/about-project">
+              <li className="text-xl py-4 flex">
+                <FaInfoCircle
+                  href=""
+                  size={25}
+                  className="mr-4 text-white bg-black rounded-full"
+                />
+                About Project
+              </li>
+            </Link>
             <Link to="/team">
               <li className="text-xl py-4 flex">
                 <FaUsers
@@ -94,13 +101,15 @@ const TopNav = () => {
               </li>
             </Link>
 
-            <li className="text-xl py-4 flex">
-              <FaEnvelope
-                size={25}
-                className="mr-4 text-white bg-black rounded-full"
-              />
-              Contact
-            </li>
+            <Link to="/contact-us">
+              <li className="text-xl py-4 flex">
+                <FaEnvelope
+                  size={25}
+                  className="mr-4 text-white bg-black rounded-full"
+                />
+                Contact
+              </li>
+            </Link>
           </ul>
         </nav>
       </div>
